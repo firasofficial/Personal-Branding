@@ -1,0 +1,908 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="cyber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Firas â€” Senior Product Designer & Creative Technologist</title>
+  <meta name="description" content="Personal branding portfolio of Muhammad Firas, Senior Product Designer & Creative Technologist. Specializing in spatial UI, high-performance design systems, and next-generation interactive experiences.">
+  <meta name="keywords" content="Product Designer, Creative Technologist, Spatial UI, Design Systems, UX Design, Three.js, Antigravity UI">
+  <meta name="author" content="Muhammad Firas">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Firas â€” Senior Product Designer & Creative Technologist">
+  <meta property="og:description" content="Translating complex multi-dimensional systems into weightless, intuitive human experiences. Explore case studies and interactive antigravity experiments.">
+  <meta property="og:image" content="assets/chronos.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Cursor & Ambient Background Glows -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="cursor-glow" id="cursor-glow"></div>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brand-logo" aria-label="Muhammad Firas Home">
+        <span class="logo-symbol">âœ¦</span>
+        <span class="logo-text"><span id="nav-brand-name">Muhammad Firas</span><span class="logo-dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#skills" class="nav-link">Skills Lab</a>
+        <a href="#portfolio" class="nav-link">Works</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Sound Toggle -->
+        <button class="icon-btn sound-btn" id="sound-btn" aria-label="Toggle sound effects" title="Toggle Sound Effects">
+          <svg class="sound-on-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="sound-off-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Live Customizer Trigger -->
+        <button class="btn btn-outline studio-trigger-btn" id="studio-trigger-btn" aria-label="Open Studio Profile Customizer">
+          <span class="gear-spin">âš™</span>
+          <span>Live Editor</span>
+        </button>
+
+        <!-- Let's Talk CTA -->
+        <a href="#contact" class="btn btn-primary nav-cta">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-nav-links">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#skills" class="mobile-link">Skills Lab</a>
+      <a href="#portfolio" class="mobile-link">Selected Works</a>
+      <a href="#testimonials" class="mobile-link">Testimonials</a>
+      <a href="#contact" class="mobile-link">Get in Touch</a>
+      <button class="btn btn-primary" id="mobile-editor-btn">Open Live Editor</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Left: Dynamic Bio & Intro -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge" id="hero-status-badge">
+            <span class="pulse-beacon"></span>
+            <span class="badge-text" id="status-text">Available for Select Q4/2026 Strategic Projects</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-title">
+            Architecting <span class="gradient-text text-glow">Zero-Gravity</span> Experiences & Next-Gen Interfaces.
+          </h1>
+
+          <!-- Role with Dynamic Typing Specializations -->
+          <div class="hero-role-wrapper">
+            <h2 class="hero-role" id="hero-role-title">Senior Product Designer & Creative Technologist</h2>
+            <div class="ticker-box">
+              <span class="ticker-prefix">Focus //</span>
+              <span class="ticker-text" id="ticker-text">Spatial Computing</span>
+              <span class="ticker-cursor">|</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Bio -->
+          <p class="hero-bio" id="hero-bio-desc">
+            Translating complex multi-dimensional systems into weightless, intuitive human experiences. Bridging high-craft aesthetic design with scalable frontend architecture and creative computation.
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary btn-lg" id="hero-explore-btn">
+              <span>Explore Works</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+
+            <button class="btn btn-glass btn-lg" id="quick-copy-email-btn" data-email="firas.design@nexus.io">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+
+            <a href="#contact" class="btn btn-outline btn-lg" id="hero-book-btn">
+              <span>Book Call</span>
+            </a>
+          </div>
+
+          <!-- Quick Micro Stats -->
+          <div class="hero-metrics-strip">
+            <div class="metric-item">
+              <span class="metric-number">10+</span>
+              <span class="metric-label">Years Crafting</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">40M+</span>
+              <span class="metric-label">End Users Reached</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number">14</span>
+              <span class="metric-label">Design & Tech Awards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3D Floating Profile Card & Antigravity Elements -->
+        <div class="hero-visual-wrapper">
+          <div class="tilt-container" id="hero-tilt-card" data-tilt-max="15">
+            <div class="profile-card-3d">
+              <div class="card-inner-glare"></div>
+              
+              <!-- Avatar Frame -->
+              <div class="avatar-frame">
+                <img src="assets/hero-avatar.jpg" alt="Muhammad Firas - Creative Technologist" class="avatar-img" id="hero-avatar-img">
+                <div class="avatar-hologram-scanline"></div>
+              </div>
+
+              <!-- Card Base Details -->
+              <div class="card-footer-info">
+                <div class="info-meta">
+                  <div class="info-id">ID: MF-2026 // BIO-AUTHENTICATED</div>
+                  <div class="info-name" id="card-hero-name">Muhammad Firas</div>
+                  <div class="info-role" id="card-hero-role">Senior Product Designer</div>
+                </div>
+                <div class="card-chip">
+                  <div class="chip-circuit"></div>
+                </div>
+              </div>
+
+              <!-- Orbiting Antigravity Glassmorphic Badges -->
+              <div class="floating-badge badge-top-right" data-float-speed="5">
+                <span class="badge-icon">âœ¦</span>
+                <span class="badge-val">VisionOS & WebGL</span>
+              </div>
+
+              <div class="floating-badge badge-mid-left" data-float-speed="6">
+                <span class="badge-icon">ðŸ’Ž</span>
+                <span class="badge-val">Design Systems</span>
+              </div>
+
+              <div class="floating-badge badge-bottom-right" data-float-speed="4">
+                <span class="badge-icon">âš¡</span>
+                <span class="badge-val">Zero-G Interaction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ambient Ring Behind Card -->
+          <div class="ambient-orbit-ring ring-1"></div>
+          <div class="ambient-orbit-ring ring-2"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FLOATING INTERACTIVE SKILL / TECH NODES (ANTIGRAVITY SIMULATOR) -->
+    <section class="skills-lab-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">PHYSICS ENGINE // INTERACTIVE LAB</div>
+          <h2 class="section-title">Antigravity <span class="gradient-text">Skill Matrix</span></h2>
+          <p class="section-subtitle">
+            An interactive zero-gravity playground simulating skill nodes. Grab and fling nodes, toggle gravitational fields, or hover to inspect architectural mastery.
+          </p>
+        </div>
+
+        <!-- Physics Controls Bar -->
+        <div class="physics-controls">
+          <div class="control-group">
+            <span class="control-label">Gravity Mode:</span>
+            <div class="btn-group" role="group" aria-label="Gravity Physics Mode">
+              <button class="btn btn-sm btn-control active" data-mode="zero-g" id="mode-zero-g">Zero-G Drift</button>
+              <button class="btn btn-sm btn-control" data-mode="attract" id="mode-attract">Cursor Magnetic</button>
+              <button class="btn btn-sm btn-control" data-mode="repel" id="mode-repel">Repulsion Field</button>
+              <button class="btn btn-sm btn-control" data-mode="orbit" id="mode-orbit">Planetary Orbit</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <button class="btn btn-sm btn-glass" id="btn-physics-burst">
+              <span>âš¡ Gravitational Pulse</span>
+            </button>
+            <button class="btn btn-sm btn-glass" id="btn-physics-reset">
+              <span>â†º Reset Nodes</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Antigravity Canvas Container -->
+        <div class="canvas-wrapper" id="canvas-wrapper">
+          <canvas id="antigravity-canvas"></canvas>
+          <div class="canvas-instructions">
+            <span>ðŸ–± Drag & throw nodes â€¢ Move cursor to alter gravitational lens</span>
+          </div>
+
+          <!-- Selected Node Detail Modal / Overlay -->
+          <div class="node-inspector-card hidden" id="node-inspector">
+            <button class="inspector-close" id="inspector-close" aria-label="Close Inspector">&times;</button>
+            <div class="inspector-header">
+              <div class="inspector-icon" id="inspector-icon">âœ¦</div>
+              <div>
+                <h4 class="inspector-title" id="inspector-title">Design Systems</h4>
+                <span class="inspector-badge" id="inspector-category">Core Expertise</span>
+              </div>
+            </div>
+            <div class="inspector-body">
+              <p id="inspector-desc">Multi-platform tokenized design architecture with dynamic theme engines and cross-functional token pipelines.</p>
+              <div class="inspector-meter-wrap">
+                <div class="meter-info">
+                  <span>Fluency Level</span>
+                  <span id="inspector-fluency">98% (Mastery)</span>
+                </div>
+                <div class="meter-bar">
+                  <div class="meter-fill" id="inspector-bar" style="width: 98%;"></div>
+                </div>
+              </div>
+              <div class="inspector-projects">
+                <span class="proj-label">Applied in:</span>
+                <span class="proj-val" id="inspector-projects">Chronos Spatial, Aether Fintech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Skill Category Badges -->
+        <div class="skills-categories-grid">
+          <div class="skill-category-card">
+            <div class="cat-icon">ðŸŽ¨</div>
+            <h3>Product Design & UX</h3>
+            <p>Design Systems, Micro-interactions, Accessibility (WCAG AAA), User Research, Wireframing & Prototyping.</p>
+          </div>
+          <div class="skill-category-card">
+            <div class="cat-icon">ðŸ‘“</div>
+            <h3>Spatial & 3D Realities</h3>
+            <p>VisionOS UI, Three.js, WebGL Shaders, Spline 3D, Blender, Spatial Audio, Depth Mapping.</p>
+          </div>
+          <div class="skill-category-card">
+            <div class="cat-icon">âš¡</div>
+            <h3>Creative Engineering</h3>
+            <p>Modern JavaScript (ESNext), TypeScript, Canvas 2D/Physics, CSS Architecture, Next.js, API Integration.</p>
+          </div>
+          <div class="skill-category-card">
+            <div class="cat-icon">ðŸ¤–</div>
+            <h3>AI Interface Paradigms</h3>
+            <p>Generative AI UX, Contextual Prompting, Latent Space Exploration, Multi-modal Agents, Intelligent Dashboards.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PORTFOLIO GRID WITH CASE STUDY MODALS -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">SELECTED WORKS // 2024 â€” 2026</div>
+          <h2 class="section-title">Crafted for the <span class="gradient-text">Next Dimensional</span> Web</h2>
+          <p class="section-subtitle">
+            A curated collection of flagship case studies combining rigorous systems thinking, futuristic visuals, and tangible business breakthroughs.
+          </p>
+        </div>
+
+        <!-- Portfolio Filter Tabs -->
+        <div class="portfolio-filter-tabs" role="tablist">
+          <button class="filter-tab active" data-filter="all">All Projects (4)</button>
+          <button class="filter-tab" data-filter="spatial">Spatial & 3D UI</button>
+          <button class="filter-tab" data-filter="fintech">Fintech & SaaS</button>
+          <button class="filter-tab" data-filter="ai">Generative AI Tools</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolio-grid">
+          
+          <!-- Project 1: Chronos -->
+          <article class="project-card tilt-card" data-category="spatial" data-project-id="chronos">
+            <div class="card-visual">
+              <img src="assets/chronos.jpg" alt="Chronos Spatial Design System" class="project-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="explore-pill">Open Case Study</span>
+              </div>
+              <span class="project-year-badge">2026 // VISION OS</span>
+            </div>
+            <div class="card-content">
+              <div class="project-tags">
+                <span class="tag">Spatial UI</span>
+                <span class="tag">XR Design System</span>
+                <span class="tag">Three.js</span>
+              </div>
+              <h3 class="project-title">Chronos Space OS</h3>
+              <p class="project-excerpt">
+                A spatial design system and holographic telemetry workspace built for multi-window mixed reality operations and orbit navigation.
+              </p>
+              <div class="project-footer">
+                <div class="impact-metric">
+                  <span class="metric-highlight">+180%</span>
+                  <span class="metric-desc">Task completion speed</span>
+                </div>
+                <button class="btn-text-arrow" aria-label="Read Chronos Case Study">
+                  <span>Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Aether Pay -->
+          <article class="project-card tilt-card" data-category="fintech" data-project-id="aether">
+            <div class="card-visual">
+              <img src="assets/aether.jpg" alt="Aether Pay Biometric Neo-Banking" class="project-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="explore-pill">Open Case Study</span>
+              </div>
+              <span class="project-year-badge">2025 // MOBILE & WEB</span>
+            </div>
+            <div class="card-content">
+              <div class="project-tags">
+                <span class="tag">Fintech</span>
+                <span class="tag">Biometrics</span>
+                <span class="tag">Design Tokens</span>
+              </div>
+              <h3 class="project-title">Aether Pay Neo-Bank</h3>
+              <p class="project-excerpt">
+                Reimagining luxury private banking with zero-latency biometric authentication, 3D asset visualization, and predictive portfolio rebalancing.
+              </p>
+              <div class="project-footer">
+                <div class="impact-metric">
+                  <span class="metric-highlight">$1.4B+</span>
+                  <span class="metric-desc">Processed transactions</span>
+                </div>
+                <button class="btn-text-arrow" aria-label="Read Aether Pay Case Study">
+                  <span>Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Vortex Creative Engine -->
+          <article class="project-card tilt-card" data-category="ai" data-project-id="vortex">
+            <div class="card-visual">
+              <img src="assets/vortex.jpg" alt="Vortex 3D Generative Suite" class="project-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="explore-pill">Open Case Study</span>
+              </div>
+              <span class="project-year-badge">2025 // DESKTOP SUITE</span>
+            </div>
+            <div class="card-content">
+              <div class="project-tags">
+                <span class="tag">Generative AI</span>
+                <span class="tag">3D Simulation</span>
+                <span class="tag">Pro Tool UX</span>
+              </div>
+              <h3 class="project-title">Vortex Creative Suite</h3>
+              <p class="project-excerpt">
+                A dark-mode high-throughput 3D generative suite enabling artists to direct real-time fluid dynamics, ray-traced materials, and procedural nodes.
+              </p>
+              <div class="project-footer">
+                <div class="impact-metric">
+                  <span class="metric-highlight">0.4s</span>
+                  <span class="metric-desc">Real-time render latency</span>
+                </div>
+                <button class="btn-text-arrow" aria-label="Read Vortex Case Study">
+                  <span>Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Pulse Quantum Health -->
+          <article class="project-card tilt-card" data-category="fintech" data-project-id="pulse">
+            <div class="card-visual">
+              <div class="card-custom-graphics pulse-gradient-canvas">
+                <div class="floating-pulse-ring ring-a"></div>
+                <div class="floating-pulse-ring ring-b"></div>
+                <div class="pulse-data-overlay">
+                  <div class="vital-row">
+                    <span class="vital-label">NEURAL SYNC</span>
+                    <span class="vital-value">99.4%</span>
+                  </div>
+                  <div class="vital-wave-svg">
+                    <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 30 Q 30 10, 60 30 T 120 30 T 160 5 T 200 30" stroke="#00f0ff" stroke-width="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="explore-pill">Open Case Study</span>
+              </div>
+              <span class="project-year-badge">2024 // SAAS & EMBEDDED</span>
+            </div>
+            <div class="card-content">
+              <div class="project-tags">
+                <span class="tag">Healthcare AI</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Ambient UX</span>
+              </div>
+              <h3 class="project-title">Pulse Ambient Health</h3>
+              <p class="project-excerpt">
+                Predictive clinical monitoring dashboard providing ambient intelligence to intensive care specialists without cognitive overload.
+              </p>
+              <div class="project-footer">
+                <div class="impact-metric">
+                  <span class="metric-highlight">4.9 â˜…</span>
+                  <span class="metric-desc">Clinician satisfaction score</span>
+                </div>
+                <button class="btn-text-arrow" aria-label="Read Pulse Case Study">
+                  <span>Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TESTIMONIAL CAROUSEL -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">TESTIMONIALS & ENDORSEMENTS</div>
+          <h2 class="section-title">Trusted by Visionary <span class="gradient-text">Founders & Teams</span></h2>
+          <p class="section-subtitle">
+            What leaders from venture-backed startups, enterprise platforms, and design labs say about partnering together.
+          </p>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="testimonial-track">
+              
+              <!-- Slide 1 -->
+              <div class="testimonial-card">
+                <div class="card-quote-icon">â€œ</div>
+                <p class="quote-text">
+                  Alex possesses that exceedingly rare synthesis of world-class aesthetic discernment and deep engineering fluency. The spatial design system built for Chronos saved our product engineering team at least 6 months of trial-and-error.
+                </p>
+                <div class="author-row">
+                  <div class="author-avatar-badge">SJ</div>
+                  <div class="author-info">
+                    <h4 class="author-name">Sarah Jenkins</h4>
+                    <span class="author-title">VP of Product, Apex Spatial Tech</span>
+                  </div>
+                  <div class="rating-stars">â˜…â˜…â˜…â˜…â˜…</div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="testimonial-card">
+                <div class="card-quote-icon">â€œ</div>
+                <p class="quote-text">
+                  Working with Alex fundamentally elevated how we think about human-computer interaction in fintech. The 3D micro-interactions and biometric security UX turned Aether Pay into a viral product right from launch day.
+                </p>
+                <div class="author-row">
+                  <div class="author-avatar-badge">MT</div>
+                  <div class="author-info">
+                    <h4 class="author-name">Marcus Thorne</h4>
+                    <span class="author-title">Co-Founder & CEO, Aether Capital</span>
+                  </div>
+                  <div class="rating-stars">â˜…â˜…â˜…â˜…â˜…</div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="testimonial-card">
+                <div class="card-quote-icon">â€œ</div>
+                <p class="quote-text">
+                  In a world of templated design, Alex crafts interfaces that feel truly alive. The anti-gravity visual cues and fluid interactions give products an unforgettable identity that users love and competitors copy.
+                </p>
+                <div class="author-row">
+                  <div class="author-avatar-badge">ER</div>
+                  <div class="author-info">
+                    <h4 class="author-name">Elena Rostova</h4>
+                    <span class="author-title">Design Director, Nova Studios</span>
+                  </div>
+                  <div class="rating-stars">â˜…â˜…â˜…â˜…â˜…</div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="testimonial-card">
+                <div class="card-quote-icon">â€œ</div>
+                <p class="quote-text">
+                  Exceptional clarity of thought, unmatched speed, and flawless precision down to every single sub-pixel and micro-haptic. Alex didn't just deliver mockupsâ€”Alex delivered a masterclass in modern digital craftsmanship.
+                </p>
+                <div class="author-row">
+                  <div class="author-avatar-badge">DP</div>
+                  <div class="author-info">
+                    <h4 class="author-name">Dr. David Park</h4>
+                    <span class="author-title">Chief Technology Officer, Pulse Intelligence</span>
+                  </div>
+                  <div class="rating-stars">â˜…â˜…â˜…â˜…â˜…</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="carousel-nav-bar">
+            <button class="carousel-arrow prev-btn" id="carousel-prev" aria-label="Previous Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-dots" id="carousel-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+            </div>
+            <button class="carousel-arrow next-btn" id="carousel-next" aria-label="Next Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACT & CONNECT HUB -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-grid">
+          
+          <!-- Contact Left: Bio & Availability Hub -->
+          <div class="contact-info-card">
+            <div class="section-tag">INITIATE COLLABORATION</div>
+            <h2 class="contact-title">Letâ€™s build something <span class="gradient-text">unprecedented</span> together.</h2>
+            <p class="contact-desc">
+              Currently reviewing select advisory engagements, executive design partnerships, and high-impact design system builds.
+            </p>
+
+            <!-- Timezone & Current Availability Widget -->
+            <div class="timezone-widget">
+              <div class="tz-header">
+                <span class="tz-pulse"></span>
+                <span class="tz-city" id="tz-city">Jakarta (WIB / UTC+7)</span>
+              </div>
+              <div class="tz-time" id="tz-live-time">11:37 AM â€” Available for Sync</div>
+              <div class="tz-note">Expected reply time: &lt; 12 hours</div>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="direct-contact-items">
+              <div class="contact-direct-item">
+                <div class="contact-icon">âœ‰</div>
+                <div>
+                  <span class="item-label">Direct Inbox</span>
+                  <a href="mailto:firas.design@nexus.io" class="item-link" id="contact-email-link">firas.design@nexus.io</a>
+                </div>
+              </div>
+              
+              <div class="contact-direct-item">
+                <div class="contact-icon">ðŸ“…</div>
+                <div>
+                  <span class="item-label">Direct Calendar</span>
+                  <a href="https://cal.com" target="_blank" rel="noopener noreferrer" class="item-link">Schedule a 30-min Strategy Intro</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="GitHub Profile">
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="LinkedIn Profile">
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="X / Twitter Profile">
+                <span>X (Twitter)</span>
+              </a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="Dribbble Profile">
+                <span>Dribbble</span>
+              </a>
+              <a href="https://read.cv" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="ReadCV Profile">
+                <span>ReadCV</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Right: Interactive Message Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="interactive-form">
+              <div class="form-header">
+                <h3 class="form-title">Send a Direct Transmission</h3>
+                <span class="form-subtitle">Encrypted communication channel</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" name="name" required placeholder="e.g. Jonathan Reed" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Your Work Email</label>
+                <input type="email" id="form-email" name="email" required placeholder="jonathan@company.com" class="form-input">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-project-type">Project Scope</label>
+                  <select id="form-project-type" name="projectType" class="form-select">
+                    <option value="Product Redesign & UI/UX">Product Redesign & UI/UX</option>
+                    <option value="Design System Architecture">Design System Architecture</option>
+                    <option value="Spatial / 3D Experience">Spatial / 3D Experience</option>
+                    <option value="Generative AI Workflow">Generative AI Workflow</option>
+                    <option value="Advisory / Consulting">Advisory / Consulting</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-budget">Target Budget</label>
+                  <select id="form-budget" name="budget" class="form-select">
+                    <option value="$10k - $25k">$10k â€“ $25k</option>
+                    <option value="$25k - $50k" selected>$25k â€“ $50k</option>
+                    <option value="$50k - $100k+">$50k â€“ $100k+</option>
+                    <option value="Advisory / Retainer">Advisory / Retainer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Brief Project Overview</label>
+                <textarea id="form-message" name="message" rows="4" required placeholder="Tell me about your product goals, timeline, and vision..." class="form-textarea"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Transmit Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-success-banner hidden" id="form-success">
+                <div class="success-icon">âœ“</div>
+                <div>
+                  <h4>Transmission Received!</h4>
+                  <p>Thank you for reaching out. Alex will review your brief and reply within 12 hours.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-symbol">âœ¦</span>
+          <span id="footer-brand-name">Muhammad Firas</span>
+        </div>
+        <p class="footer-copy">
+          Designed with zero-gravity aesthetics & crafted in pure Vanilla Web Architecture.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-tagline">
+          <span>Obsidian Studio Â© 2026. All rights reserved.</span>
+        </div>
+        <div class="footer-actions">
+          <a href="#hero" class="btn-scroll-top" aria-label="Back to Top">
+            <span>Back to Orbit</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY DETAIL MODAL (Dynamic Content) -->
+  <div class="modal-backdrop hidden" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study Modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-content-scroll" id="modal-body-content">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- STUDIO PROFILE LIVE CUSTOMIZER (Drawer) -->
+  <aside class="customizer-drawer hidden" id="customizer-drawer" aria-label="Studio Profile Customizer">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <span class="drawer-icon">âš™</span>
+        <div>
+          <h3>Live Profile Studio</h3>
+          <span class="drawer-sub">Instant real-time personal branding customizer</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Customizer">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Section 1: Personal Info -->
+      <div class="customizer-section">
+        <h4>1. Identity & Profession</h4>
+        
+        <div class="cust-field">
+          <label for="cust-name">Display Name</label>
+          <input type="text" id="cust-name" class="cust-input" value="Muhammad Firas">
+        </div>
+
+        <div class="cust-field">
+          <label for="cust-role">Professional Title / Role</label>
+          <input type="text" id="cust-role" class="cust-input" value="Senior Product Designer & Creative Technologist">
+        </div>
+
+        <div class="cust-field">
+          <label for="cust-status">Status Banner Text</label>
+          <input type="text" id="cust-status" class="cust-input" value="Available for Select Q4/2026 Strategic Projects">
+        </div>
+
+        <div class="cust-field">
+          <label for="cust-email">Contact Email</label>
+          <input type="email" id="cust-email" class="cust-input" value="firas.design@nexus.io">
+        </div>
+
+        <div class="cust-field">
+          <label for="cust-bio">Dynamic Hero Bio</label>
+          <textarea id="cust-bio" rows="3" class="cust-textarea">Translating complex multi-dimensional systems into weightless, intuitive human experiences. Bridging high-craft aesthetic design with scalable frontend architecture and creative computation.</textarea>
+        </div>
+      </div>
+
+      <!-- Section 2: Visual Aesthetic / Color Theme -->
+      <div class="customizer-section">
+        <h4>2. Antigravity Color Theme</h4>
+        <div class="theme-palette-grid">
+          <button class="palette-option active" data-theme-val="cyber" title="Cyber Neon">
+            <span class="color-dot dot-cyan"></span>
+            <span class="color-dot dot-violet"></span>
+            <span class="palette-name">Cyber Neon</span>
+          </button>
+          
+          <button class="palette-option" data-theme-val="aurora" title="Emerald Aurora">
+            <span class="color-dot dot-emerald"></span>
+            <span class="color-dot dot-teal"></span>
+            <span class="palette-name">Emerald Aurora</span>
+          </button>
+
+          <button class="palette-option" data-theme-val="solar" title="Solar Flare">
+            <span class="color-dot dot-amber"></span>
+            <span class="color-dot dot-rose"></span>
+            <span class="palette-name">Solar Flare</span>
+          </button>
+
+          <button class="palette-option" data-theme-val="monochrome" title="Obsidian Titanium">
+            <span class="color-dot dot-silver"></span>
+            <span class="color-dot dot-white"></span>
+            <span class="palette-name">Obsidian Silver</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Section 3: Antigravity Physics Speed -->
+      <div class="customizer-section">
+        <h4>3. Zero-G Physics Simulation</h4>
+        <div class="cust-field">
+          <div class="range-header">
+            <span>Float Drift Velocity</span>
+            <span id="physics-speed-label">Normal (1.0x)</span>
+          </div>
+          <input type="range" id="cust-physics-speed" min="0.3" max="2.5" step="0.1" value="1.0" class="cust-range">
+        </div>
+
+        <div class="cust-toggle-field">
+          <label for="cust-sound-toggle">Audio Feedback (Synthesizer)</label>
+          <input type="checkbox" id="cust-sound-toggle" checked class="cust-checkbox">
+        </div>
+      </div>
+
+      <!-- Section 4: Actions -->
+      <div class="customizer-actions">
+        <button class="btn btn-primary btn-block" id="btn-save-profile">
+          <span>Apply & Save Profile</span>
+        </button>
+        <button class="btn btn-outline btn-block" id="btn-reset-profile">
+          <span>Reset to Defaults</span>
+        </button>
+        <button class="btn btn-glass btn-block" id="btn-export-profile">
+          <span>Export JSON Config</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/sound-fx.js"></script>
+  <script src="js/card-tilt.js"></script>
+  <script src="js/antigravity-canvas.js"></script>
+  <script src="js/profile-editor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
